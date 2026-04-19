@@ -151,7 +151,9 @@ header {
 
 /* LOGO */
 .logo-imagen {
-  width: 200px;
+  width: 170px;
+  height: auto;
+  display: block;
 }
 
 /* TITULO */
