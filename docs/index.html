@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>certi-redes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-nuevo">
+            <img class="logo-imagen" src="imagen/maxilogo2.png" alt="logo MAXILIBROS" />
+        </div>
+
+        <div class="titulo">
+            <h1>MAXILIBROS</h1>
+        </div>
+
+        <div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" id="menu-btn">☰</label>
+
+            <div class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="libros.html">LIBROS</a></li>
+
+                        <li><a href="autores.html">AUTORES</a></li>
+
+                        <li><a href="#ofertas">OFERTAS</a></li>
+
+                        <li><a href="registro.html">REGISTRO</a></li>
+
+                    </ul>
+                </nav>
+                <button id="modo">CAMBIAR A MODO OSCURO</button>
+            </div>
+    </header>
+
+    <div class="backgroundA" alt="fondo maxilibros">
+
+    </div>
+    <main>
+        <div class="layout-principal">
+            <section id="mendoza">
+                <div class="contenido">
+
+
+                    <p id="contador"></p>
+
+                    <div class="libro-img">
+                        <img src="imagen/WhatsApp Image 2026-04-18 at 7.13.16 PM (1).jpeg" alt="">
+                        <img src="imagen/WhatsApp Image 2026-04-18 at 7.13.16 PM (2).jpeg" alt="">
+                        <img src="imagen/WhatsApp Image 2026-04-18 at 7.13.16 PM.jpeg" alt="">
+                    </div>
+
+                    <div class="opciones-vista">
+                        <button onclick="cambiarVista('grid')">🔳</button>
+                        <button onclick="cambiarVista('lista')">📄</button>
+                    </div>
+
+                    <div id="preview">
+                        <img id="preview-img" src="" alt="">
+                        <div id="preview-info">
+                            <h3 id="preview-title">Selecciona un libro</h3>
+                            <h3>mira los libros que estan en oferta </h3>
+                            <p id="preview-desc">Aquí aparecerá la descripción</p>
+                        </div>
+                    </div>
+                    <div id="contenedor-libros" class="grid">
+                        <div class="libro">
+                            <div class="varios">
+
+                                <img src="imagen/39644343-500-auto.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Una escalera al cielo"
+                                    data-desc="Aspectos clave del libro:
+Temática: Historias de personajes atrapados en situaciones límite, donde la desesperanza se mezcla con destellos de humanidad.
+Escenario: Bogotá funciona no solo como fondo, sino como un personaje que corrompe, desafía y moldea a sus habitantes.
+El relato homónimo: Una escalera al cielo sigue a Manuel, un joven que rechaza el éxito académico tradicional por un camino de libertad personal, esfuerzo y sufrimiento.
+Estilo: Es una narrativa directa y descarnada, típica de Mendoza, que busca generar incomodidad y reflexión en el lector sobre la realidad social."
+                                    alt="Libro 1">
+
+                                <img src="imagen/39644732-500-auto.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Diario del fin del mundo" data-desc="Esta obra presenta una narrativa intensa y reflexiva que mezcla elementos de la realidad con una visión crítica del mundo contemporáneo. A través de una historia cargada de tensión, el autor construye un relato que cuestiona la sociedad, la moral y el comportamiento humano frente a situaciones límite. La obra invita al lector a reflexionar sobre el rumbo de la humanidad, explorando temas como el caos social, la desesperanza y la búsqueda de sentido en medio de la incertidumbre." alt="Libro 2">
+                                <img src="imagen/biblioteca.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="La biblioteca de la medianoche noche" data-desc="Esta novela aborda la vida de una mujer que, atrapada entre la vida y la muerte, tiene la oportunidad de explorar diferentes versiones de su existencia. Cada libro dentro de la biblioteca representa una decisión distinta y un camino alternativo que pudo haber tomado. Es una obra profundamente emocional que reflexiona sobre el arrepentimiento, las decisiones y el valor de la vida, mostrando que incluso los pequeños cambios pueden generar grandes diferencias." alt="Libro 3">
+                                <img src="imagen/petalos.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Petalos de papel" data-desc="Esta historia combina romance, drama y crecimiento personal en una narrativa que conecta con las emociones del lector. A través de sus personajes, la obra muestra procesos de cambio, superación y descubrimiento personal. Es una lectura que destaca por su sensibilidad, explorando relaciones humanas, sentimientos profundos y la importancia de encontrar el propio camino" alt="Libro 4">
+                                <img src="imagen/sipuedo.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="si Puedo y es fácil" data-desc="Este libro se enfoca en el desarrollo personal y el crecimiento interior, proponiendo herramientas para fortalecer la mente y mejorar la calidad de vida. A través de un lenguaje sencillo, la autora transmite mensajes de motivación, disciplina y autoconocimiento. La obra invita al lector a creer en sus capacidades, promoviendo una actitud positiva frente a los retos y dificultades del día a día." alt="Libro 5">
+                                <img src="imagen/testament.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="El testamento" data-desc="Esta novela combina el suspenso con el ámbito legal, desarrollando una historia centrada en la herencia de un millonario y los conflictos que surgen a su alrededor. A medida que avanza la trama, se revelan secretos familiares y decisiones inesperadas que cambian el rumbo de los personajes. Es una obra dinámica que mantiene la atención del lector, explorando temas como la ambición, la justicia y las relaciones humanas." alt="Libro 6">
+                                <img src="imagen/rescatando.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Rescatando a Colombia" data-desc="Este libro presenta un enfoque social y reflexivo sobre la realidad del país, analizando problemáticas actuales y proponiendo posibles soluciones. A través de diferentes perspectivas, se busca generar conciencia sobre la importancia del desarrollo sostenible y la participación ciudadana. La obra invita al lector a comprender el contexto nacional y a involucrarse en la construcción de un mejor futuro" alt="Libro 7">
+                                <img src="imagen/elproceso.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="El proceso" data-desc="Considerada una de las obras más representativas de la literatura universal, esta novela narra la historia de un hombre que es acusado sin conocer el motivo, enfrentándose a un sistema judicial absurdo y opresivo. La obra refleja la angustia, la incertidumbre y la falta de control del individuo frente a estructuras de poder incomprensibles, convirtiéndose en una crítica profunda a la burocracia y a la sociedad moderna." alt="Libro 8">
+                                <img src="imagen/asisomos.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Así somos" data-desc="Este libro explora el comportamiento humano desde una perspectiva reflexiva, analizando las emociones, decisiones y relaciones que forman parte de la vida cotidiana. A través de ejemplos y situaciones cercanas, la obra permite al lector identificarse con los contenidos, generando una comprensión más profunda de sí mismo y de los demás." alt="Libro 9">
+                                <img src="imagen/lasvenas.webp" onclick="mostrarLibro(this)"
+                                    data-titulo="Las venas abiertas de América Latina" data-desc="Esta obra es un análisis histórico y político que expone la explotación de los recursos naturales y humanos en América Latina a lo largo del tiempo. Con un estilo narrativo claro y contundente, el autor presenta una crítica al colonialismo y a las desigualdades generadas por factores externos e internos. Es un libro que invita a la reflexión sobre la historia del continente y su impacto en la realidad actual." alt="Libro 10">
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+        </div>
+
+        <div class="backgroundB">hola
+
+        </div>
+
+        <h2>Bienvenido a Maxilibros</h2>
+            <p>
+                Bienvenido a Maxilibros, un espacio digital creado para todos aquellos que encuentran en la lectura una
+                forma de explorar nuevas ideas, emociones y conocimientos. Aquí encontrarás una amplia variedad de
+                libros organizados en diferentes categorías, pensadas para adaptarse a todos los gustos, desde historias
+                llenas de suspenso hasta relatos profundos que invitan a la reflexión personal.
+            </p>
+
+            <p>
+                Este sitio ha sido diseñado para que puedas navegar de manera cómoda y descubrir contenidos de forma
+                intuitiva. Cada sección ha sido estructurada cuidadosamente para ofrecer una experiencia clara, donde la
+                información fluye de manera organizada, permitiendo que el usuario explore sin dificultad cada uno de
+                los elementos disponibles.
+            </p>
+
+            <h3>Explora nuestras categorías</h3>
+            <p>
+                En Maxilibros podrás encontrar diferentes categorías literarias como novela urbana, terror, romance,
+                ciencia ficción, desarrollo personal y thriller. Cada una de estas categorías agrupa obras que comparten
+                características similares, facilitando la búsqueda y permitiendo al usuario descubrir nuevas lecturas
+                que se ajusten a sus intereses.
+            </p>
+
+            <p>
+                La organización del contenido permite que cada visitante tenga una experiencia personalizada, ya que
+                puede explorar desde los géneros más populares hasta propuestas más específicas que enriquecen el
+                conocimiento y amplían la perspectiva del lector.
+            </p>
+
+            <h3>Libros en oferta</h3>
+            <p>
+                Dentro de nuestra plataforma también encontrarás una sección dedicada a libros en oferta, donde se
+                destacan diferentes obras seleccionadas por su relevancia, popularidad o valor literario. Este espacio
+                permite al usuario acceder a contenido destacado y descubrir nuevas lecturas recomendadas.
+            </p>
+
+            <p>
+                Estas ofertas no solo buscan resaltar libros, sino también incentivar el hábito de la lectura, brindando
+                opciones atractivas que inviten al usuario a seguir explorando y ampliando su biblioteca personal.
+            </p>
+
+            <h3>Eventos y comunidad</h3>
+            <p>
+                Maxilibros no es solo un sitio web, también es un espacio que busca conectar a las personas a través de
+                la lectura. Próximamente se estarán realizando eventos como ferias del libro, encuentros literarios y
+                espacios de interacción donde los usuarios podrán compartir opiniones, descubrir nuevas obras y
+                participar activamente en la comunidad.
+            </p>
+
+            <p>
+                Te invitamos a estar atento a nuestras actualizaciones y a participar en los diferentes eventos que se
+                estarán anunciando, con el objetivo de fortalecer el interés por la lectura y generar un entorno de
+                aprendizaje constante.
+            </p>
+
+            <h3>Sobre la experiencia</h3>
+            <p>
+                La experiencia del usuario ha sido uno de los pilares fundamentales en la creación de Maxilibros. Se han
+                implementado elementos visuales, efectos interactivos y transiciones que permiten una navegación más
+                dinámica y atractiva, logrando que el usuario no solo consulte información, sino que también disfrute
+                del recorrido dentro del sitio.
+            </p>
+
+            <p>
+                El diseño responsivo permite que la página se adapte a diferentes dispositivos, garantizando una
+                correcta visualización tanto en pantallas grandes como en dispositivos móviles. Esto permite que el
+                usuario pueda acceder al contenido en cualquier momento y desde cualquier lugar.
+            </p>
+
+            <h3>Compromiso con la lectura</h3>
+            <p>
+                Maxilibros tiene como objetivo principal promover la lectura como una herramienta de crecimiento
+                personal, cultural y académico. A través de esta plataforma, se busca ofrecer un espacio donde el
+                conocimiento esté al alcance de todos, facilitando el acceso a información relevante y contenidos de
+                calidad.
+            </p>
+
+            <p>
+                Cada libro, cada autor y cada sección ha sido seleccionada con el propósito de aportar valor al usuario,
+                permitiendo que cada visita al sitio sea una oportunidad para aprender, reflexionar y descubrir nuevas
+                historias.
+            </p>
+
+            <h3>Explora sin límites</h3>
+            <p>
+                Te invitamos a recorrer cada sección de Maxilibros, a descubrir nuevas historias y a sumergirte en el
+                mundo de la literatura. Utiliza el desplazamiento (scroll) para explorar todo el contenido disponible y
+                no perderte ninguna de las secciones que hemos preparado para ti.
+            </p>
+
+            <p>
+                Este espacio ha sido creado pensando en ti, en tu curiosidad y en tus ganas de aprender. Maxilibros es
+                más que una página web, es una puerta abierta al conocimiento, la imaginación y el crecimiento personal.
+            </p>
+
+            <div class="libro">
+                <div class="varios">
+                    <img src="imagen/momentomori.webp" alt="Libro 1">
+                    <img src="imagen/aparicion.webp" alt="Libro 1">
+                    <img src="imagen/banana.webp" alt="Libro 1">
+                    <img src="imagen/asisomos.webp" alt="Libro 1">
+                    <img src="imagen/biblioteca.webp" alt="Libro 1">
+                    <img src="imagen/cosasinvicibles.webp" alt="Libro 1">
+                    <img src="imagen/dejadesertu.webp" alt="Libro 1">
+                    <img src="imagen/Dios.webp" alt="Libro 1">
+                    <img src="imagen/elcuerpo.webp" alt="Libro 1">
+                    <img src="imagen/elhombre.webp" alt="Libro 1">
+                    <img src="imagen/elproceso.webp" alt="Libro 1">
+                    <img src="imagen/guerraz.webp" alt="Libro 1">
+                    <img src="imagen/lasvenas.webp" alt="Libro 1">
+                    <img src="imagen/orgulloprejuicio.webp" alt="Libro 1">
+                    <img src="imagen/torreoscura.webp" alt="Libro 1">
+                    <img src="imagen/nochesblancas.webp" alt="Libro 1">
+                    <img src="imagen/aleida.webp" alt="Libro 1">
+                    <img src="imagen/testament.webp" alt="Libro 1">
+                    <img src="imagen/sipuedo.webp" alt="Libro 1">
+                    <img src="imagen/bajopuerta.webp" alt="Libro 1">
+
+                </div>
+
+                <button id="btnTop"> Volver arriba</button>
+
+                <p id="contador"></p>
+
+    </main>
+
+    <footer>
+
+        <div class="footer">
+
+            <div class="celular">
+                <h2>LINEA DE ATENCION</h2>
+                <h3>CELULAR</h3>
+                <p> +57 3002422121</p>
+            </div>
+
+            <div class="fijo">
+                <h2>TELEFONO FIJO</h2>
+
+                <p>3712251</p>
+            </div>
+
+            <div class="ubicacion">
+
+                <h2>NUESTRA UBICACION ES:</h2>
+                <p>direccion</p>
+                <p>calle 5A Norte #27N-33</p>
+                <p>estamos ubicados en la ciudad de CALI</p>
+            </div>
+            <div>
+                <img src="imagen/maxilogo2.PNG" alt="imagen gdo">
+
+            </div>
+
+            <div class="hecho">
+                <p>&copy; 2026-MAXILIBROS </p>
+                </p> HECHO POR STIVEN QUIROGA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

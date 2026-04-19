@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>libros</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-nuevo">
+            <img class="logo-imagen" src="imagen/maxilogo2.png" alt="logo MAXILIBROS" />
+        </div>
+
+        <div class="titulo">
+            <h1>MAXILIBROS</h1>
+        </div>
+
+        <div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon" id="menu-btn">☰</label>
+
+            <div class="nav">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="index.html">INICIO</a></li>
+
+                        <li><a href="autores.html">AUTORES</a></li>
+
+                      
+
+                        <li><a href="registro.html">REGISTRO</a></li>
+
+                    </ul>
+                </nav>
+                <button id="modo">CAMBIAR A MODO OSCURO</button>
+            </div>
+    </header>
+
+         <div class="backgroundD" alt="fondo certiredes">
+        
+         </div>
+    <main>
+        <div class="layout-principal">
+
+
+            
+
+            <div class="contenido">
+
+                <h2>CATEGORIAS</h2>
+
+               
+<p id="contador"></p>
+             
+
+                <ul>
+
+                    <li>Novela urbana</li>
+                    <li>Terror</li>
+                    <li>Ciencia ficción </li>
+                    <li>Desarrollo personal </li>
+                    <li>Romance</li>
+                    <li>Thriller</li>
+                    <li>Clásicos</li>
+                </ul>
+
+                <h2>MARIO MENDOZA</h2>
+
+                <p>
+                    <strong>Mario Mendoza</strong> es un escritor,
+                    periodista y profesor colombiano nacido
+                    en Bogotá en 1964, reconocido como una de las voces
+                    más influyentes de la literatura
+                    contemporánea en Colombia y América Latina. Su obra
+                    se ha caracterizado por una profunda
+                    exploración de la condición humana dentro de
+                    contextos urbanos, abordando temáticas como
+                    la marginalidad, la violencia, la soledad, la locura
+                    y la búsqueda de sentido en medio
+                    del caos moderno.
+
+                    A lo largo de su trayectoria, Mendoza ha construido
+                    un universo literario sólido y
+                    coherente, en el que la ciudad de Bogotá se
+                    convierte en un escenario vivo, casi como un
+                    personaje más, donde convergen historias de
+                    individuos que enfrentan conflictos internos
+                    y realidades sociales complejas. Su estilo narrativo
+                    combina elementos del realismo con
+                    tintes filosóficos y psicológicos, logrando relatos
+                    intensos que invitan a la reflexión
+                    crítica del lector.
+
+                    Entre sus obras más destacadas se encuentran novelas
+                    como <em>Satanás</em>, ganadora del
+                    Premio Biblioteca Breve, así como <em>La ciudad de
+                        los umbrales</em>, <em>Scorpio
+                        City</em> y <em>Buda Blues</em>, textos que han
+                    consolidado su reconocimiento a
+                    nivel nacional e internacional. Además, ha
+                    incursionado en el ensayo y la literatura
+                    juvenil, ampliando su alcance a diferentes públicos
+                    y generaciones.
+
+                    Más allá de la narrativa, Mario Mendoza ha
+                    desarrollado una importante labor académica y
+                    periodística, lo que ha influido en la profundidad
+                    de sus obras, dotándolas de una
+                    mirada crítica sobre la sociedad contemporánea. Su
+                    escritura no solo busca contar
+                    historias, sino también generar conciencia,
+                    cuestionar estructuras y provocar una
+                    introspección en el lector.
+
+                    Su legado literario continúa creciendo,
+                    posicionándolo como un autor fundamental para
+                    comprender las dinámicas sociales, culturales y
+                    emocionales del mundo actual.
+                </p>
+
+                <h3>COLECCIÓN MARIO MENDOZA</h3>
+
+                <p>
+                    Esta colección reúne una cuidadosa selección de
+                    obras que representan la esencia del
+                    pensamiento y la narrativa de Mario Mendoza. A
+                    través de sus libros, el lector tiene la
+                    oportunidad de sumergirse en relatos que exploran
+                    las múltiples dimensiones del ser
+                    humano, desde sus conflictos internos hasta su
+                    relación con el entorno social.
+
+                    Cada obra ofrece una experiencia única, en la que se
+                    entrelazan el suspenso, la
+                    introspección y el análisis crítico de la realidad.
+                    Sus historias permiten recorrer
+                    distintos escenarios urbanos y psicológicos,
+                    mostrando personajes complejos que reflejan
+                    las tensiones y contradicciones de la vida moderna.
+
+                    Más que una simple recopilación de textos, esta
+                    colección se presenta como una puerta de
+                    entrada al universo del autor, invitando al lector a
+                    cuestionar, reflexionar y construir
+                    su propia visión del mundo a partir de las
+                    experiencias narradas. De esta manera, la
+                    lectura se convierte en un proceso de
+                    enriquecimiento personal, donde cada página aporta
+                    una nueva perspectiva sobre la realidad y la
+                    naturaleza humana.
+                </p>
+
+                <div class="opciones-vista">
+                    <button onclick="cambiarVista('grid')">🔳</button>
+                    <button onclick="cambiarVista('lista')">📄</button>
+                </div>
+
+                <div id="preview">
+                    <img id="preview-img" src="" alt="">
+                    <div id="preview-info">
+                        <h3 id="preview-title">Selecciona un libro</h3>
+                        <p id="preview-desc">Aquí aparecerá la descripción</p>
+                    </div>
+                </div>
+                <div id="contenedor-libros" class="grid">
+                    <div class="libro">
+                        <div class="varios">
+                            <img src="imagen/39644343-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Una escalera al cielo"
+                                data-desc="Aspectos clave del libro:
+Temática: Historias de personajes atrapados en situaciones límite, donde la desesperanza se mezcla con destellos de humanidad.
+Escenario: Bogotá funciona no solo como fondo, sino como un personaje que corrompe, desafía y moldea a sus habitantes.
+El relato homónimo: Una escalera al cielo sigue a Manuel, un joven que rechaza el éxito académico tradicional por un camino de libertad personal, esfuerzo y sufrimiento.
+Estilo: Es una narrativa directa y descarnada, típica de Mendoza, que busca generar incomodidad y reflexión en el lector sobre la realidad social."
+                                alt="Libro 1">
+
+                            <img src="imagen/39644732-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 2">
+                            <img src="imagen/39887635-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 3">
+                            <img src="imagen/39911789-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 4">
+                            <img src="imagen/39914142-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 5">
+                            <img src="imagen/39914164-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 6">
+                            <img src="imagen/40517067-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 7">
+                            <img src="imagen/40600969-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 8">
+                            <img src="imagen/40622299-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 9">
+                            <img src="imagen/40633711-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 10">
+                            <img src="imagen/40657048-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 11">
+                            <img src="imagen/40657079-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 12">
+                            <img src="imagen/40675848-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 13">
+                            <img src="imagen/40701719-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 14">
+                            <img src="imagen/40701851-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 15">
+                            <img src="imagen/40706211-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 16">
+                            <img src="imagen/40706362-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 17">
+                            <img src="imagen/40622299-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 18">
+                            <img src="imagen/39914142-500-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 19">
+                            <img src="imagen/40706409-1200-auto.webp" onclick="mostrarLibro(this)"
+                                data-titulo="Nombre del libro" data-desc="Descripción del libro" alt="Libro 20">
+
+                        </div>
+
+                    </div>
+                </div>
+                </section>
+            </div>
+
+        </div>
+
+        <div class="backgroundE">hola
+
+        </div>
+
+        <h3>OTROS AUTORES</h3>
+
+        <p>
+            La presente colección se enriquece con la inclusión de
+            autores de gran reconocimiento a nivel internacional, cuyas
+            obras han trascendido fronteras y generaciones,
+            consolidándose como referentes dentro de diversos géneros
+            literarios. Entre ellos, Stephen King se posiciona como una
+            de las figuras más influyentes de la literatura
+            contemporánea, especialmente en el ámbito del terror y el
+            suspenso psicológico. Sus historias no solo exploran lo
+            sobrenatural, sino que profundizan en los miedos internos,
+            las emociones humanas y las complejidades de la mente,
+            logrando una conexión intensa con el lector.
+
+            En este panorama también destaca George R.R. Martin,
+            reconocido por su capacidad para construir universos
+            complejos dentro de la fantasía épica, donde la política, la
+            guerra y las relaciones humanas se entrelazan con gran
+            detalle. De igual manera, J.K. Rowling ha dejado una huella
+            significativa en la literatura juvenil y fantástica,
+            desarrollando una narrativa que combina imaginación, valores
+            y crecimiento personal, atrayendo a lectores de todas las
+            edades.
+
+            Por su parte, Dan Brown se ha consolidado en el género del
+            thriller histórico y de misterio, integrando elementos de
+            arte, religión y ciencia en tramas dinámicas que invitan al
+            análisis y la interpretación. En contraste, autores como
+            Haruki Murakami ofrecen una propuesta más introspectiva,
+            donde lo cotidiano se mezcla con lo surreal, generando
+            experiencias literarias profundas y abiertas a múltiples
+            significados.
+
+            Asimismo, Isabel Allende representa una de las voces más
+            importantes de la literatura latinoamericana, destacándose
+            por su estilo narrativo cargado de realismo mágico, memoria
+            histórica y sensibilidad social. Sus obras abordan temas
+            como la identidad, el amor, la pérdida y la resiliencia,
+            consolidando una narrativa rica en emociones y contextos
+            culturales.
+        </p>
+
+        <p>
+            Dentro de esta diversidad literaria, también se incluyen
+            autores que han explorado el comportamiento humano desde
+            distintas perspectivas. Max Brooks, por ejemplo, ha
+            desarrollado narrativas centradas en escenarios
+            apocalípticos que permiten reflexionar sobre la organización
+            social y la supervivencia. Joe Dispenza, desde un enfoque
+            más científico y motivacional, aporta contenidos
+            relacionados con la transformación personal, la mente y la
+            conciencia, integrando conocimientos de la neurociencia en
+            sus planteamientos.
+
+            En el ámbito de la narrativa emocional contemporánea, Banana
+            Yoshimoto ofrece una visión íntima de la vida cotidiana,
+            explorando sentimientos como la soledad, la pérdida y la
+            reconstrucción emocional. Su estilo sencillo pero profundo
+            permite una conexión directa con el lector. Andrea
+            Longarela, por su parte, se enfoca en historias románticas
+            actuales, caracterizadas por su cercanía con el público
+            joven y por abordar las relaciones humanas desde una
+            perspectiva realista y emocional.
+
+            De igual manera, John Grisham ha logrado posicionarse como
+            uno de los principales exponentes del thriller legal,
+            construyendo relatos que combinan tensión narrativa con
+            cuestionamientos éticos y sociales. Autores como Paulo
+            Coelho también forman parte de este panorama, aportando
+            obras centradas en la reflexión espiritual, el propósito de
+            vida y la búsqueda personal, lo que ha permitido que sus
+            libros alcancen una amplia difusión a nivel global.
+
+            Finalmente, la colección incorpora una variedad de autores
+            adicionales que complementan la experiencia literaria, tales
+            como Gabriel García Márquez, reconocido por su aporte al
+            realismo mágico; Julio Cortázar, por su innovación
+            narrativa; y Ernest Hemingway, por su estilo directo y
+            profundo. Esta integración de múltiples voces, estilos y
+            contextos permite ofrecer un catálogo equilibrado y
+            enriquecedor, en el que cada lector puede encontrar obras
+            acordes a sus intereses y preferencias.
+        </p>
+
+        <p>
+            En conjunto, la diversidad de autores presentes en esta
+            sección no solo amplía el panorama literario, sino que
+            también fortalece el desarrollo del pensamiento crítico y la
+            apreciación cultural. Cada obra representa una oportunidad
+            para explorar nuevas ideas, comprender diferentes realidades
+            y generar un proceso de reflexión personal a través de la
+            lectura.
+
+            De esta manera, la colección se consolida como un espacio
+            integral que promueve el conocimiento, la imaginación y el
+            crecimiento intelectual, permitiendo al lector transitar por
+            distintos géneros como el terror, la fantasía, el romance,
+            el ensayo, la ciencia ficción y la narrativa contemporánea.
+            Así, más que una simple recopilación de libros, se configura
+            como una experiencia literaria completa, diseñada para
+            enriquecer la visión del mundo y fomentar el hábito de la
+            lectura de manera significativa y constante.
+        </p>
+
+        <div class="libro">
+            <div class="varios">
+                <img src="imagen/momentomori.webp" alt="Libro 1">
+                <img src="imagen/aparicion.webp" alt="Libro 1">
+                <img src="imagen/banana.webp" alt="Libro 1">
+                <img src="imagen/asisomos.webp" alt="Libro 1">
+                <img src="imagen/biblioteca.webp" alt="Libro 1">
+                <img src="imagen/cosasinvicibles.webp" alt="Libro 1">
+                <img src="imagen/dejadesertu.webp" alt="Libro 1">
+                <img src="imagen/Dios.webp" alt="Libro 1">
+                <img src="imagen/elcuerpo.webp" alt="Libro 1">
+                <img src="imagen/elhombre.webp" alt="Libro 1">
+                <img src="imagen/elproceso.webp" alt="Libro 1">
+                <img src="imagen/guerraz.webp" alt="Libro 1">
+                <img src="imagen/lasvenas.webp" alt="Libro 1">
+                <img src="imagen/orgulloprejuicio.webp" alt="Libro 1">
+                <img src="imagen/torreoscura.webp" alt="Libro 1">
+                <img src="imagen/nochesblancas.webp" alt="Libro 1">
+                <img src="imagen/aleida.webp" alt="Libro 1">
+                <img src="imagen/testament.webp" alt="Libro 1">
+                <img src="imagen/sipuedo.webp" alt="Libro 1">
+                <img src="imagen/bajopuerta.webp" alt="Libro 1">
+
+            </div>
+
+            <button id="btnTop"> Volver arriba</button>
+
+            <p id="contador"></p>
+
+    </main>
+
+    <footer>
+
+        <div class="footer">
+
+            <div class="celular">
+                <h2>LINEA DE ATENCION</h2>
+                <h3>CELULAR</h3>
+                <p> +57 3002422121</p>
+            </div>
+
+            <div class="fijo">
+                <h2>TELEFONO FIJO</h2>
+
+                <p>3712251</p>
+            </div>
+
+            <div class="ubicacion">
+
+                <h2>NUESTRA UBICACION ES:</h2>
+                <p>direccion</p>
+                <p>calle 5A Norte #27N-33</p>
+                <p>estamos ubicados en la ciudad de CALI</p>
+            </div>
+            <div>
+                <img src="imagen/maxilogo2.PNG" alt="imagen gdo">
+
+            </div>
+
+            <div class="hecho">
+                <p>&copy; 2026-MAXILIBROS </p>
+                </p> HECHO POR STIVEN QUIROGA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
